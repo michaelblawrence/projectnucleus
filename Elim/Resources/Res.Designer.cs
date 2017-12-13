@@ -103,15 +103,6 @@ namespace Elim.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream elim1 {
-            get {
-                return ResourceManager.GetStream("elim1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream sfx_bomb_drop {
             get {
                 return ResourceManager.GetStream("sfx_bomb_drop", resourceCulture);
