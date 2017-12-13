@@ -80,21 +80,27 @@ namespace Elim
             // Get the volume on a scale of 1 to 10 (to fit the trackbar)
             audioLevel = CalcVol / (ushort.MaxValue / 10);
 
-            audioPlayer = new SoundPlayer(Resources.Res.elim1);
-            if (playingMusic)
+            //audioPlayer = new SoundPlayer(Resources.Res.elim1);
+            if (playingMusic && audioPlayer != null)
                 audioPlayer.PlayLooping();
         }
 
         public static void PlayMusic()
         {
-            audioPlayer.PlayLooping();
-            playingMusic = true;
+            if (audioPlayer != null)
+            {
+                audioPlayer.PlayLooping();
+                playingMusic = true;
+            }
         }
 
         public static void StopMusic()
         {
-            audioPlayer.Stop();
-            playingMusic = false;
+            if (audioPlayer != null)
+            {
+                audioPlayer.Stop();
+                playingMusic = false;
+            }
         }
         public static int EditMusicLevel(int newLevel)
         {
